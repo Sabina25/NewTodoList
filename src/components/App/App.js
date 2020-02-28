@@ -18,7 +18,10 @@ class App extends Component {
             const utdatesTodos = prevState.todos.map(todo=>
                 {
                     if (todo.id===id) {
-                        todo.completed = !todo.completed
+                       return {
+                            ...todo,
+                            completed: !todo.completed
+                       }
                     }
 
                     return todo
